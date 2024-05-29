@@ -1,3 +1,7 @@
+# This was a quick project I threw together to help celebrate teachera appreciation week at our school
+#the following code creates 5x5 bingo cards with 25 randomized images.  
+#the first 5 cards are winners after 12 predetermind bingo images are called.  the remaining cards are losers.  
+
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase import pdfmetrics
@@ -48,7 +52,8 @@ subTitle = 'Instructions go here!'
 
 pdf = canvas.Canvas(fileName)
 
-for i in range(5):
+winCardNum = int(input("Enter the number of winning cards you would like."))
+for i in range(winCardNum):
     winner = False
 
     while winner == False:
